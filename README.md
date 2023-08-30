@@ -6,6 +6,8 @@
 
 *Günlük yorumunu öğrenmek istediğiniz burcun adını "-burc {burç ismi}" şeklinde yazınız.
 
+*Burç ismini yazarken türkçe karatkerler kullanmamaya dikkat ediniz. Mesela -burc oğlak değil, -burc oglak yazmalısınız.
+
 *Rastgele bir tarot kartı çekip fal baktırmak için "-tarot" yazınız. 
 
 
