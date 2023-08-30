@@ -1,7 +1,8 @@
 import asyncio
 import discord
+import os
+from dotenv import load_dotenv
 from discord.ext import commands, tasks
-from config import TOKEN, PREFIX
 from web_scraping import get_content, get_tarot_content , horoscope_signs
 from utils import format_embed , format_horoscope_embed
 import random
@@ -10,7 +11,11 @@ intents = discord.Intents.all()
 intents.typing = False
 intents.presences = False
 
-bot = commands.Bot(command_prefix= PREFIX , intents=intents)
+load_dotenv()
+
+TOKEN = os.getenv("DISCORD_TOKEN")
+
+bot = commands.Bot(command_prefix= "-" , intents=intents)
 
 @bot.event
 async def on_ready():
@@ -42,7 +47,7 @@ async def burc(ctx, sign):
 async def my_loop():
     get_content()
     get_tarot_content()
-    await bot.change_presence(activity=discord.Game(name=f"{PREFIX}burc <burç ismi>"), status=discord.Status.online)
+    await bot.change_presence(activity=discord.Game(name=f"-burc <burç ismi>"), status=discord.Status.online)
 
 
 if __name__ == "__main__":
