@@ -40,7 +40,7 @@ async def burc(ctx, sign):
             embed = format_horoscope_embed(sign_dictionary[sign])
             await ctx.send(embed=embed)
     else:
-        await ctx.send("Geçerli bir burç ismi giriniz.")
+        await ctx.send("Geçerli bir burç ismi giriniz. (Türkçe karakter kullanmayınız)")
 
 
 @tasks.loop(hours=24)
