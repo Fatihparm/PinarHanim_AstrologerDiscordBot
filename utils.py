@@ -1,6 +1,6 @@
 import discord
 
-def format_embed(item):
+def format_tarot_embed(item):
     embed = discord.Embed(title=item.name, description=item.description, color=0x00ff00)
     embed.set_image(url=item.image)
     return embed

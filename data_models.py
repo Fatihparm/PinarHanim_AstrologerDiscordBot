@@ -5,8 +5,7 @@ class ZodiacSign():
         self.date = date
 
 class TarotCard():
-    def __init__(self, name, id, description, image):
+    def __init__(self, name, description, image):
         self.name = name
-        self.id = id
         self.description = description
         self.image = image
